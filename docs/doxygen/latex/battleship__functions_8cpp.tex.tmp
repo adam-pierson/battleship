@@ -1,0 +1,359 @@
+\hypertarget{battleship__functions_8cpp}{}\section{src/source/battleship\+\_\+functions.cpp File Reference}
+\label{battleship__functions_8cpp}\index{src/source/battleship\+\_\+functions.\+cpp@{src/source/battleship\+\_\+functions.\+cpp}}
+{\ttfamily \#include \char`\"{}battleship.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for battleship\+\_\+functions.\+cpp\+:
+% FIG 0
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148}{ship\+\_\+details} \{ \\*
+\hyperlink{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148aa7970bb5f1149f16a82922773632ebe3}{length}, 
+\hyperlink{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148a207c4ab774da0e81b3edd8d84ab08caa}{direction}, 
+\hyperlink{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148a349bbff470c22b82dedfae147a5d9a8c}{x1}, 
+\hyperlink{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ab2b38bff5272e2f58d1c950fa09ec21e}{y1}, 
+\\*
+\hyperlink{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ac9b6e8d1af7ce8ae332595ccf954567c}{x2}, 
+\hyperlink{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148aa0b79d87696b65aa829190d434c32b5b}{y2}, 
+\hyperlink{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ac239d590df9cb2cea403e5c2eba5cbce}{health}
+ \}\begin{DoxyCompactList}\small\item\em Details of a ship. \end{DoxyCompactList}
+\item 
+enum \hyperlink{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4}{ship\+\_\+directions} \{ \hyperlink{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4ac84387af3365dd0e5cffb2705e68b585}{horizontal}, 
+\hyperlink{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4a270a1cbccb65bff055850369d8494b4c}{vertical}
+ \}\begin{DoxyCompactList}\small\item\em Possible directions of a ship. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{battleship__functions_8cpp_a7e1513c2649a6a21e3c82aef319d16b7}{create\+\_\+sea} ()
+\begin{DoxyCompactList}\small\item\em Assigns \textquotesingle{}0\textquotesingle{}s to each point of the sea (playing board) and prints it to console. \end{DoxyCompactList}\item 
+void \hyperlink{battleship__functions_8cpp_aa10ff8772d676bbb93531e10cc23d99a}{random\+\_\+number\+\_\+generator} ()
+\begin{DoxyCompactList}\small\item\em Allows to generate random numbers. \end{DoxyCompactList}\item 
+void \hyperlink{battleship__functions_8cpp_a6b7c1d0e40b36f6105a0cf7f7ff3d17d}{set\+\_\+ships} ()
+\begin{DoxyCompactList}\small\item\em Sets up the ships. \end{DoxyCompactList}\item 
+void \hyperlink{battleship__functions_8cpp_a12a979fc04bc9ec7f67959c557089fc3}{set\+\_\+ship\+\_\+length\+\_\+health} ()
+\begin{DoxyCompactList}\small\item\em Sets up the length and deafault health of each ship. \end{DoxyCompactList}\item 
+void \hyperlink{battleship__functions_8cpp_a8e1b7636538d44369030045ff0d62a15}{set\+\_\+ship\+\_\+direction} ()
+\item 
+void \hyperlink{battleship__functions_8cpp_a1b23f23b853ecaf0fb2c03530b1fb5a3}{set\+\_\+ship\+\_\+coordinates} ()
+\begin{DoxyCompactList}\small\item\em Sets the coordinates of the ships. \end{DoxyCompactList}\item 
+void \hyperlink{battleship__functions_8cpp_a6fc2b33541d9179f51b6b25705a13a34}{first\+\_\+ship\+\_\+coordinates} ()
+\begin{DoxyCompactList}\small\item\em Randomly generates coordinates for the first ship. \end{DoxyCompactList}\item 
+void \hyperlink{battleship__functions_8cpp_a3988da92191ee688b3af4e6fdba6e9a3}{horizontal\+\_\+ship\+\_\+coordinates} (int index)
+\item 
+void \hyperlink{battleship__functions_8cpp_a45cc191d3c7c4cfd2879c119c885135a}{vertical\+\_\+ship\+\_\+coordinates} (int index)
+\item 
+void \hyperlink{battleship__functions_8cpp_a3b27700cff71acefaa82b4ab3bd0565f}{next\+\_\+ship\+\_\+coordinates} (int index)
+\item 
+int \hyperlink{battleship__functions_8cpp_ae53285be934be52f40a8f01e3be5fe4c}{check\+\_\+clashes} (int index)
+\item 
+int \hyperlink{battleship__functions_8cpp_ac5a50dfac37c645271ebcff0e26e3145}{go\+\_\+through\+\_\+new\+\_\+ship\+\_\+points} (int new\+\_\+index, int set\+\_\+index)
+\item 
+int \hyperlink{battleship__functions_8cpp_a5c4792097830caf00c30f4c9737ebcfd}{go\+\_\+through\+\_\+reserved\+\_\+points} (int set\+\_\+index, int new\+\_\+x, int new\+\_\+y)
+\item 
+void \hyperlink{battleship__functions_8cpp_a6d58098c6cf63c241ed03bc797256bb1}{play} ()
+\begin{DoxyCompactList}\small\item\em Enables player to play the game and prints a message when the game is over. \end{DoxyCompactList}\item 
+void \hyperlink{battleship__functions_8cpp_aa3912aa6df5e81d539cf9f0709cb765f}{shoot} ()
+\begin{DoxyCompactList}\small\item\em Receives coordinates from console and proceeds those. \end{DoxyCompactList}\item 
+bool \hyperlink{battleship__functions_8cpp_a74f7dafadf261cb1760c22bb94002665}{verify\+\_\+coordinates} (std\+::string x, std\+::string y)
+\item 
+int \hyperlink{battleship__functions_8cpp_a2603007ca63646c4e3ee5eae2487ddc7}{convert\+\_\+x} (std\+::string x)
+\item 
+int \hyperlink{battleship__functions_8cpp_a2dd727493e6c0422563d07365b31353c}{convert\+\_\+y} (std\+::string y)
+\item 
+void \hyperlink{battleship__functions_8cpp_a963da7b061b392c3092aaa420c87e6c6}{hit\+\_\+check} (int x, int y)
+\item 
+void \hyperlink{battleship__functions_8cpp_adf823313129b236bab06a5747d4f6045}{health\+\_\+check} (int index)
+\item 
+void \hyperlink{battleship__functions_8cpp_ae227f3bce285392cc3153f44db9ce6b0}{update\+\_\+sea} ()
+\begin{DoxyCompactList}\small\item\em Prints the updated sea to console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{battleship__functions_8cpp_aab938108caad0d0e47d6885b5ba2d23a}{size} = 10
+\begin{DoxyCompactList}\small\item\em The size of one side of the playing board. \end{DoxyCompactList}\item 
+const int \hyperlink{battleship__functions_8cpp_ada8f9c34ea6de0264c2d808acf540ad2}{count} = 10
+\begin{DoxyCompactList}\small\item\em Number of the ships. \end{DoxyCompactList}\item 
+const int \hyperlink{battleship__functions_8cpp_a07f29ca9ca92204303623ab3614ca6e1}{details} = 7
+\begin{DoxyCompactList}\small\item\em Number of ship details. \end{DoxyCompactList}\item 
+char \hyperlink{battleship__functions_8cpp_a541f2d583acdf613f18ff304830f5f1e}{sea} \mbox{[}\hyperlink{battleship__functions_8cpp_aab938108caad0d0e47d6885b5ba2d23a}{size}\mbox{]}\mbox{[}\hyperlink{battleship__functions_8cpp_aab938108caad0d0e47d6885b5ba2d23a}{size}\mbox{]}
+\begin{DoxyCompactList}\small\item\em The playing board. \end{DoxyCompactList}\item 
+int \hyperlink{battleship__functions_8cpp_a3e9bdf3339787488e782f7eeae83a907}{ships} \mbox{[}\hyperlink{battleship__functions_8cpp_ada8f9c34ea6de0264c2d808acf540ad2}{count}\mbox{]}\mbox{[}\hyperlink{battleship__functions_8cpp_a07f29ca9ca92204303623ab3614ca6e1}{details}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of the ships. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!ship\+\_\+details@{ship\+\_\+details}}
+\index{ship\+\_\+details@{ship\+\_\+details}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{ship\+\_\+details}{ship_details}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ship\+\_\+details}}\hypertarget{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148}{}\label{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148}
+
+
+Details of a ship. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{length@{length}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!length@{length}}\item[{\em 
+length\hypertarget{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148aa7970bb5f1149f16a82922773632ebe3}{}\label{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148aa7970bb5f1149f16a82922773632ebe3}
+}]\index{direction@{direction}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!direction@{direction}}\item[{\em 
+direction\hypertarget{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148a207c4ab774da0e81b3edd8d84ab08caa}{}\label{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148a207c4ab774da0e81b3edd8d84ab08caa}
+}]\index{x1@{x1}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!x1@{x1}}\item[{\em 
+x1\hypertarget{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148a349bbff470c22b82dedfae147a5d9a8c}{}\label{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148a349bbff470c22b82dedfae147a5d9a8c}
+}]\index{y1@{y1}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!y1@{y1}}\item[{\em 
+y1\hypertarget{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ab2b38bff5272e2f58d1c950fa09ec21e}{}\label{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ab2b38bff5272e2f58d1c950fa09ec21e}
+}]\index{x2@{x2}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!x2@{x2}}\item[{\em 
+x2\hypertarget{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ac9b6e8d1af7ce8ae332595ccf954567c}{}\label{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ac9b6e8d1af7ce8ae332595ccf954567c}
+}]\index{y2@{y2}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!y2@{y2}}\item[{\em 
+y2\hypertarget{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148aa0b79d87696b65aa829190d434c32b5b}{}\label{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148aa0b79d87696b65aa829190d434c32b5b}
+}]\index{health@{health}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!health@{health}}\item[{\em 
+health\hypertarget{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ac239d590df9cb2cea403e5c2eba5cbce}{}\label{battleship__functions_8cpp_a962a7384b7a7be2c14bd62c4cee9b148ac239d590df9cb2cea403e5c2eba5cbce}
+}]\end{description}
+\end{Desc}
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!ship\+\_\+directions@{ship\+\_\+directions}}
+\index{ship\+\_\+directions@{ship\+\_\+directions}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{ship\+\_\+directions}{ship_directions}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ship\+\_\+directions}}\hypertarget{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4}{}\label{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4}
+
+
+Possible directions of a ship. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{horizontal@{horizontal}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!horizontal@{horizontal}}\item[{\em 
+horizontal\hypertarget{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4ac84387af3365dd0e5cffb2705e68b585}{}\label{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4ac84387af3365dd0e5cffb2705e68b585}
+}]\index{vertical@{vertical}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!vertical@{vertical}}\item[{\em 
+vertical\hypertarget{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4a270a1cbccb65bff055850369d8494b4c}{}\label{battleship__functions_8cpp_aaccd2e27dbe5571d670fb7c95205ecc4a270a1cbccb65bff055850369d8494b4c}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!check\+\_\+clashes@{check\+\_\+clashes}}
+\index{check\+\_\+clashes@{check\+\_\+clashes}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{check\+\_\+clashes(int index)}{check_clashes(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}int check\+\_\+clashes (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_ae53285be934be52f40a8f01e3be5fe4c}{}\label{battleship__functions_8cpp_ae53285be934be52f40a8f01e3be5fe4c}
+Checks if a given ship clashes with or positioned next to already set ships. index -\/ array index of a given ship. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!convert\+\_\+x@{convert\+\_\+x}}
+\index{convert\+\_\+x@{convert\+\_\+x}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{convert\+\_\+x(std\+::string x)}{convert_x(std::string x)}}]{\setlength{\rightskip}{0pt plus 5cm}int convert\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a2603007ca63646c4e3ee5eae2487ddc7}{}\label{battleship__functions_8cpp_a2603007ca63646c4e3ee5eae2487ddc7}
+Converts the \textquotesingle{}x\textquotesingle{} coordinate from string to int. x -\/ x coordinate entered by the player. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!convert\+\_\+y@{convert\+\_\+y}}
+\index{convert\+\_\+y@{convert\+\_\+y}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{convert\+\_\+y(std\+::string y)}{convert_y(std::string y)}}]{\setlength{\rightskip}{0pt plus 5cm}int convert\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a2dd727493e6c0422563d07365b31353c}{}\label{battleship__functions_8cpp_a2dd727493e6c0422563d07365b31353c}
+Converts the \textquotesingle{}y\textquotesingle{} coordinate from string to int. y -\/ y coordinate entered by the player. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!create\+\_\+sea@{create\+\_\+sea}}
+\index{create\+\_\+sea@{create\+\_\+sea}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{create\+\_\+sea()}{create_sea()}}]{\setlength{\rightskip}{0pt plus 5cm}void create\+\_\+sea (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a7e1513c2649a6a21e3c82aef319d16b7}{}\label{battleship__functions_8cpp_a7e1513c2649a6a21e3c82aef319d16b7}
+
+
+Assigns \textquotesingle{}0\textquotesingle{}s to each point of the sea (playing board) and prints it to console. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!first\+\_\+ship\+\_\+coordinates@{first\+\_\+ship\+\_\+coordinates}}
+\index{first\+\_\+ship\+\_\+coordinates@{first\+\_\+ship\+\_\+coordinates}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{first\+\_\+ship\+\_\+coordinates()}{first_ship_coordinates()}}]{\setlength{\rightskip}{0pt plus 5cm}void first\+\_\+ship\+\_\+coordinates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a6fc2b33541d9179f51b6b25705a13a34}{}\label{battleship__functions_8cpp_a6fc2b33541d9179f51b6b25705a13a34}
+
+
+Randomly generates coordinates for the first ship. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!go\+\_\+through\+\_\+new\+\_\+ship\+\_\+points@{go\+\_\+through\+\_\+new\+\_\+ship\+\_\+points}}
+\index{go\+\_\+through\+\_\+new\+\_\+ship\+\_\+points@{go\+\_\+through\+\_\+new\+\_\+ship\+\_\+points}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{go\+\_\+through\+\_\+new\+\_\+ship\+\_\+points(int new\+\_\+index, int set\+\_\+index)}{go_through_new_ship_points(int new_index, int set_index)}}]{\setlength{\rightskip}{0pt plus 5cm}int go\+\_\+through\+\_\+new\+\_\+ship\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+\_\+index, }
+\item[{int}]{set\+\_\+index}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_ac5a50dfac37c645271ebcff0e26e3145}{}\label{battleship__functions_8cpp_ac5a50dfac37c645271ebcff0e26e3145}
+Goes through each point of a given ship and calls the function that goes through each point of already set ships. new\+\_\+index -\/ array index of the most recently created ship. set\+\_\+index -\/ array index of an already set ship. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!go\+\_\+through\+\_\+reserved\+\_\+points@{go\+\_\+through\+\_\+reserved\+\_\+points}}
+\index{go\+\_\+through\+\_\+reserved\+\_\+points@{go\+\_\+through\+\_\+reserved\+\_\+points}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{go\+\_\+through\+\_\+reserved\+\_\+points(int set\+\_\+index, int new\+\_\+x, int new\+\_\+y)}{go_through_reserved_points(int set_index, int new_x, int new_y)}}]{\setlength{\rightskip}{0pt plus 5cm}int go\+\_\+through\+\_\+reserved\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{int}]{set\+\_\+index, }
+\item[{int}]{new\+\_\+x, }
+\item[{int}]{new\+\_\+y}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a5c4792097830caf00c30f4c9737ebcfd}{}\label{battleship__functions_8cpp_a5c4792097830caf00c30f4c9737ebcfd}
+Goes through each point of already set ships, points next to them. Checks if the last generated coordinates match with any of those points. set\+\_\+index -\/ array index of an already set ship. new\+\_\+x -\/ x coordinate of one of the points of the most recently created ship. new\+\_\+y -\/ y coordinate of one of the points of the most recently created ship. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!health\+\_\+check@{health\+\_\+check}}
+\index{health\+\_\+check@{health\+\_\+check}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{health\+\_\+check(int index)}{health_check(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void health\+\_\+check (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_adf823313129b236bab06a5747d4f6045}{}\label{battleship__functions_8cpp_adf823313129b236bab06a5747d4f6045}
+Checks the health of a hit ship. index -\/ array index of a given ship. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!hit\+\_\+check@{hit\+\_\+check}}
+\index{hit\+\_\+check@{hit\+\_\+check}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{hit\+\_\+check(int x, int y)}{hit_check(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void hit\+\_\+check (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a963da7b061b392c3092aaa420c87e6c6}{}\label{battleship__functions_8cpp_a963da7b061b392c3092aaa420c87e6c6}
+Checks if the shot made by player hit any of the ships. x -\/ x coordinate entered by the player converted to int. y -\/ y coordinate entered by the player converted to int. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!horizontal\+\_\+ship\+\_\+coordinates@{horizontal\+\_\+ship\+\_\+coordinates}}
+\index{horizontal\+\_\+ship\+\_\+coordinates@{horizontal\+\_\+ship\+\_\+coordinates}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{horizontal\+\_\+ship\+\_\+coordinates(int index)}{horizontal_ship_coordinates(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void horizontal\+\_\+ship\+\_\+coordinates (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a3988da92191ee688b3af4e6fdba6e9a3}{}\label{battleship__functions_8cpp_a3988da92191ee688b3af4e6fdba6e9a3}
+Randomly generates coordinates for a horizontal ship according to its length. index -\/ array index of a given ship. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!next\+\_\+ship\+\_\+coordinates@{next\+\_\+ship\+\_\+coordinates}}
+\index{next\+\_\+ship\+\_\+coordinates@{next\+\_\+ship\+\_\+coordinates}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{next\+\_\+ship\+\_\+coordinates(int index)}{next_ship_coordinates(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void next\+\_\+ship\+\_\+coordinates (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a3b27700cff71acefaa82b4ab3bd0565f}{}\label{battleship__functions_8cpp_a3b27700cff71acefaa82b4ab3bd0565f}
+Randomly generates coordinates of a given ship different than the first one, according to the rules of the game. index -\/ array index of a given ship. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!play@{play}}
+\index{play@{play}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{play()}{play()}}]{\setlength{\rightskip}{0pt plus 5cm}void play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a6d58098c6cf63c241ed03bc797256bb1}{}\label{battleship__functions_8cpp_a6d58098c6cf63c241ed03bc797256bb1}
+
+
+Enables player to play the game and prints a message when the game is over. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!random\+\_\+number\+\_\+generator@{random\+\_\+number\+\_\+generator}}
+\index{random\+\_\+number\+\_\+generator@{random\+\_\+number\+\_\+generator}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{random\+\_\+number\+\_\+generator()}{random_number_generator()}}]{\setlength{\rightskip}{0pt plus 5cm}void random\+\_\+number\+\_\+generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_aa10ff8772d676bbb93531e10cc23d99a}{}\label{battleship__functions_8cpp_aa10ff8772d676bbb93531e10cc23d99a}
+
+
+Allows to generate random numbers. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!set\+\_\+ship\+\_\+coordinates@{set\+\_\+ship\+\_\+coordinates}}
+\index{set\+\_\+ship\+\_\+coordinates@{set\+\_\+ship\+\_\+coordinates}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+\_\+ship\+\_\+coordinates()}{set_ship_coordinates()}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+ship\+\_\+coordinates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a1b23f23b853ecaf0fb2c03530b1fb5a3}{}\label{battleship__functions_8cpp_a1b23f23b853ecaf0fb2c03530b1fb5a3}
+
+
+Sets the coordinates of the ships. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!set\+\_\+ship\+\_\+direction@{set\+\_\+ship\+\_\+direction}}
+\index{set\+\_\+ship\+\_\+direction@{set\+\_\+ship\+\_\+direction}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+\_\+ship\+\_\+direction()}{set_ship_direction()}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+ship\+\_\+direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a8e1b7636538d44369030045ff0d62a15}{}\label{battleship__functions_8cpp_a8e1b7636538d44369030045ff0d62a15}
+Randomly sets the direction of the ships that are larger than 1. Considering that direction doesn\textquotesingle{}t make a difference for 1 sized ships, we set their directions to horizontal by default. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!set\+\_\+ship\+\_\+length\+\_\+health@{set\+\_\+ship\+\_\+length\+\_\+health}}
+\index{set\+\_\+ship\+\_\+length\+\_\+health@{set\+\_\+ship\+\_\+length\+\_\+health}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+\_\+ship\+\_\+length\+\_\+health()}{set_ship_length_health()}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+ship\+\_\+length\+\_\+health (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a12a979fc04bc9ec7f67959c557089fc3}{}\label{battleship__functions_8cpp_a12a979fc04bc9ec7f67959c557089fc3}
+
+
+Sets up the length and deafault health of each ship. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!set\+\_\+ships@{set\+\_\+ships}}
+\index{set\+\_\+ships@{set\+\_\+ships}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{set\+\_\+ships()}{set_ships()}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+ships (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a6b7c1d0e40b36f6105a0cf7f7ff3d17d}{}\label{battleship__functions_8cpp_a6b7c1d0e40b36f6105a0cf7f7ff3d17d}
+
+
+Sets up the ships. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!shoot@{shoot}}
+\index{shoot@{shoot}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{shoot()}{shoot()}}]{\setlength{\rightskip}{0pt plus 5cm}void shoot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_aa3912aa6df5e81d539cf9f0709cb765f}{}\label{battleship__functions_8cpp_aa3912aa6df5e81d539cf9f0709cb765f}
+
+
+Receives coordinates from console and proceeds those. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!update\+\_\+sea@{update\+\_\+sea}}
+\index{update\+\_\+sea@{update\+\_\+sea}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{update\+\_\+sea()}{update_sea()}}]{\setlength{\rightskip}{0pt plus 5cm}void update\+\_\+sea (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_ae227f3bce285392cc3153f44db9ce6b0}{}\label{battleship__functions_8cpp_ae227f3bce285392cc3153f44db9ce6b0}
+
+
+Prints the updated sea to console. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!verify\+\_\+coordinates@{verify\+\_\+coordinates}}
+\index{verify\+\_\+coordinates@{verify\+\_\+coordinates}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{verify\+\_\+coordinates(std\+::string x, std\+::string y)}{verify_coordinates(std::string x, std::string y)}}]{\setlength{\rightskip}{0pt plus 5cm}bool verify\+\_\+coordinates (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{x, }
+\item[{std\+::string}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a74f7dafadf261cb1760c22bb94002665}{}\label{battleship__functions_8cpp_a74f7dafadf261cb1760c22bb94002665}
+Verifies if entered coordinates are in the right format. x -\/ x coordinate entered by the player. y -\/ y coordinate entered by the player. \index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!vertical\+\_\+ship\+\_\+coordinates@{vertical\+\_\+ship\+\_\+coordinates}}
+\index{vertical\+\_\+ship\+\_\+coordinates@{vertical\+\_\+ship\+\_\+coordinates}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{vertical\+\_\+ship\+\_\+coordinates(int index)}{vertical_ship_coordinates(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void vertical\+\_\+ship\+\_\+coordinates (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{battleship__functions_8cpp_a45cc191d3c7c4cfd2879c119c885135a}{}\label{battleship__functions_8cpp_a45cc191d3c7c4cfd2879c119c885135a}
+Randomly generates coordinates for a vertical ship according to its length. index -\/ array index of a given ship. 
+
+\subsection{Variable Documentation}
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!count@{count}}
+\index{count@{count}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{count}{count}}]{\setlength{\rightskip}{0pt plus 5cm}const int count = 10}\hypertarget{battleship__functions_8cpp_ada8f9c34ea6de0264c2d808acf540ad2}{}\label{battleship__functions_8cpp_ada8f9c34ea6de0264c2d808acf540ad2}
+
+
+Number of the ships. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!details@{details}}
+\index{details@{details}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{details}{details}}]{\setlength{\rightskip}{0pt plus 5cm}const int details = 7}\hypertarget{battleship__functions_8cpp_a07f29ca9ca92204303623ab3614ca6e1}{}\label{battleship__functions_8cpp_a07f29ca9ca92204303623ab3614ca6e1}
+
+
+Number of ship details. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!sea@{sea}}
+\index{sea@{sea}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{sea}{sea}}]{\setlength{\rightskip}{0pt plus 5cm}char sea\mbox{[}{\bf size}\mbox{]}\mbox{[}{\bf size}\mbox{]}}\hypertarget{battleship__functions_8cpp_a541f2d583acdf613f18ff304830f5f1e}{}\label{battleship__functions_8cpp_a541f2d583acdf613f18ff304830f5f1e}
+
+
+The playing board. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!ships@{ships}}
+\index{ships@{ships}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{ships}{ships}}]{\setlength{\rightskip}{0pt plus 5cm}int ships\mbox{[}{\bf count}\mbox{]}\mbox{[}{\bf details}\mbox{]}}\hypertarget{battleship__functions_8cpp_a3e9bdf3339787488e782f7eeae83a907}{}\label{battleship__functions_8cpp_a3e9bdf3339787488e782f7eeae83a907}
+
+
+Array of the ships. 
+
+\index{battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}!size@{size}}
+\index{size@{size}!battleship\+\_\+functions.\+cpp@{battleship\+\_\+functions.\+cpp}}
+\subsubsection[{\texorpdfstring{size}{size}}]{\setlength{\rightskip}{0pt plus 5cm}const int size = 10}\hypertarget{battleship__functions_8cpp_aab938108caad0d0e47d6885b5ba2d23a}{}\label{battleship__functions_8cpp_aab938108caad0d0e47d6885b5ba2d23a}
+
+
+The size of one side of the playing board. 
+
